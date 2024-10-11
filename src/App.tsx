@@ -1,10 +1,12 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import InputBox from "./components/InputBox/InputBox.js";
 import searchForPrompt from "./services/aiService/aiService.js";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import atomDark from "react-syntax-highlighter/dist/esm/styles/prism";
 import playRingtone from "./services/ringtoneService/ringtoneService.js";
+import { CodeProps } from "react-markdown/lib/ast-to-react";
+
 
 type Message = {
   text: string;
@@ -87,12 +89,12 @@ function App() {
               {!message.isUser ? (
                 <ReactMarkdown
                   components={{
-                    code({ node, className, children, ...props }) {
+                    code({ node, inline, className, children, ...props }: CodeProps) {
                       const match = /language-(\w+)/.exec(className || "");
-                      return match ? (
+                      return !inline && match ? (
                         <div style={{ position: "relative" }}>
                           <SyntaxHighlighter
-                            style={atomDark as { [key: string]: React.CSSProperties }}
+                            style={atomDark}
                             language={match ? match[1] : ""}
                             PreTag="div"
                             {...props}
