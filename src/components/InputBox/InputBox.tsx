@@ -65,7 +65,7 @@ const InputBox: React.FC<InputBoxProps> = ({promptText, setPromptText, handleSub
         disabled={isSubmitBtnDisabled}
       >
         {
-          isInputDisabled && isSubmitBtnDisabled?(<img src={loaderIcon} />):(<>&uarr;</>)
+          isInputDisabled && isSubmitBtnDisabled?(<img className='min-w-20' src={loaderIcon} />):(<>&uarr;</>)
         }
         {/* &uarr; */}
       </button>

@@ -22,6 +22,14 @@ pre {
   overflow-x: auto;
 }
 
+pre > .other-code {
+  background-color: rgb(29, 31, 33);
+  color: aliceblue;
+  padding: 10px;
+  overflow-x: auto;
+
+}
+
 pre code {
   background-color: unset;
   color: unset;
