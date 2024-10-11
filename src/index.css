@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+h1, h2, h3, h4, h5, h6, p, b, code, blockquote, span, li, dt, dd {
+  margin-block: 20px;
+}
+
+code {
+  background-color: rgb(231 231 231);
+  color: darkslategrey;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-weight: 100;
+}
+
+pre {
+  /* background-color: black;
+  color: aliceblue;
+  padding: 10px; */
+  overflow-x: auto;
+}
+
+pre code {
+  background-color: unset;
+  color: unset;
+  padding: unset;
+  border-radius: unset;
+  font-weight: unset;
+}
+
