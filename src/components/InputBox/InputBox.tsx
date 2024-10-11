@@ -60,7 +60,7 @@ const InputBox: React.FC<InputBoxProps> = ({promptText, setPromptText, handleSub
       />
 
       <button 
-        className='w-2/12 sm:w-1/12 h-full bg-blue-700 text-white rounded-full rounded-s-none p-3 flex justify-center items-center' 
+        className='w-2/12 sm:w-1/12 h-full bg-blue-700 text-2xl text-white rounded-full rounded-s-none p-3 flex justify-center items-center' 
         onClick={handleSubmitBtn}
         disabled={isSubmitBtnDisabled}
       >
