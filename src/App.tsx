@@ -16,7 +16,7 @@ function App() {
   const [promptText, setPromptText] = useState<string>("");
   const [isInputDisabled, setIsInputDisabled] = useState<boolean>(false);
   const [isSubmitBtnDisabled, setIsSubmitBtnDisabled] = useState<boolean>(true);
-  const [messages, setMessages] = useState<Message[]>([{text: "Hello folks, I am Ghajini Ai, I always forgot the thing, How can i help you!", isUser: false}]); // Store messages
+  const [messages, setMessages] = useState<Message[]>([{text: "Hello! I’m Ghajini AI, your AI assistant with a short-term memory loss for your privacy. How can i help you today?", isUser: false}]); // Store messages
   const chatContainer = useRef<HTMLDivElement>(null);
   const chatInput = useRef<HTMLInputElement>(null);
 
