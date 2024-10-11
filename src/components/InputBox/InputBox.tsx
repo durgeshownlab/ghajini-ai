@@ -1,5 +1,4 @@
 import React, { MouseEvent } from 'react'
-import arrowUp from "../../assets/icon/arrow-up.svg"
 
 interface InputBoxProps {
   promptText: string,
