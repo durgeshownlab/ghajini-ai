@@ -1,4 +1,5 @@
 import React, { MouseEvent } from 'react'
+import loaderIcon from '../../assets/loader.gif'
 
 interface InputBoxProps {
   promptText: string,
@@ -63,7 +64,10 @@ const InputBox: React.FC<InputBoxProps> = ({promptText, setPromptText, handleSub
         onClick={handleSubmitBtn}
         disabled={isSubmitBtnDisabled}
       >
-        &uarr;
+        {
+          isInputDisabled && isSubmitBtnDisabled?(<img src={loaderIcon} />):(<>&uarr;</>)
+        }
+        {/* &uarr; */}
       </button>
     </>
   )
