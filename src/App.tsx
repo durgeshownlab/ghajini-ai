@@ -15,7 +15,7 @@ function App() {
   const [promptText, setPromptText] = useState<string>("");
   const [isInputDisabled, setIsInputDisabled] = useState<boolean>(false);
   const [isSubmitBtnDisabled, setIsSubmitBtnDisabled] = useState<boolean>(true);
-  const [messages, setMessages] = useState<Message[]>([]); // Store messages
+  const [messages, setMessages] = useState<Message[]>([{text: "Hello folks, How can i help you!", isUser: false}]); // Store messages
   const chatContainer = useRef<HTMLDivElement>(null);
   const chatInput = useRef<HTMLInputElement>(null);
 
@@ -92,8 +92,8 @@ function App() {
                       return match ? (
                         <div style={{ position: "relative" }}>
                           <SyntaxHighlighter
-                            style={atomDark}
-                            language={match[1]}
+                            style={atomDark as { [key: string]: React.CSSProperties }}
+                            language={match ? match[1] : ""}
                             PreTag="div"
                             {...props}
                           >
